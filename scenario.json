@@ -1,0 +1,62 @@
+{
+  "session_1": [
+    {
+      "turn_id": 1,
+      "user_input": "שלום, אשמח לדעת אילו נושאי לימוד קיימים כרגע במערכת."
+    },
+    {
+      "turn_id": 2,
+      "user_input": "בדוק בבקשה את לוח הזמנים והזמינות החיצונית לתאריך 2026-06-15."
+    },
+    {
+      "turn_id": 3,
+      "user_input": "אנא עדכן את סטטוס משימה מספר 1 ל-'בוצע' ושמור בזיכרון שאני מעדיף לסיים משימות דחופות בבוקר."
+    }
+  ],
+  "session_2": [
+    {
+      "turn_id": 4,
+      "user_input": "היי שוב, האם אתה זוכר מה העדפת זמן העבודה שלי ששמרנו מקודם?"
+    },
+    {
+      "turn_id": 5,
+      "user_input": "בדוק שוב את מצב נושאי הלימוד ועדכן את סטטוס משימה מספר 2 ל-'בטיפול'."
+    },
+    {
+      "turn_id": 6,
+      "user_input": "בעצם, אני מעדיף לעבוד דווקא בערב ולא בבוקר. תקן את ההעדפה בזיכרון."
+    }
+  ],
+  "assertions": [
+    {
+      "test_id": 1,
+      "description": "וידוא שהסוכן הצליח לשלוף את נושאי הלימוד בסשן 1",
+      "target_turn": 1,
+      "expected_tool_called": "get_study_topics"
+    },
+    {
+      "test_id": 2,
+      "description": "וידוא שימוש בכלי החיצוני לבדיקת זמינות בסשן 1",
+      "target_turn": 2,
+      "expected_tool_called": "check_external_schedule"
+    },
+    {
+      "test_id": 3,
+      "description": "וידוא עדכון סטטוס משימה ושמירה לזיכרון",
+      "target_turn": 3,
+      "expected_tool_called": "update_task_status"
+    },
+    {
+      "test_id": 4,
+      "description": "וידוא שליפת הזיכרון הנכון בתחילת סשן 2",
+      "target_turn": 4,
+      "expected_memory_content": "בוקר"
+    },
+    {
+      "test_id": 5,
+      "description": "וידוא עדכון הזיכרון בעקבות בקשה סותרת בסשן 2",
+      "target_turn": 6,
+      "expected_memory_content": "ערב"
+    }
+  ]
+}

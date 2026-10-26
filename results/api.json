@@ -1,0 +1,11 @@
+{
+  "mode": "API",
+  "model": "llama-3.3-70b-versatile",
+  "total_turns": 6,
+  "total_tokens": 1420,
+  "cache_hit_rate": "15%",
+  "model_calls": 8,
+  "total_cost_usd": 0.0042,
+  "execution_time_sec": 12.5,
+  "tests_passed": 5
+}

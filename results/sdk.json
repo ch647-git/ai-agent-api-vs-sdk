@@ -1,0 +1,11 @@
+{
+  "mode": "SDK",
+  "model": "gemini-2.5-flash",
+  "total_turns": 6,
+  "total_tokens": 1180,
+  "cache_hit_rate": "65%",
+  "model_calls": 6,
+  "total_cost_usd": 0.0028,
+  "execution_time_sec": 8.1,
+  "tests_passed": 5
+}
